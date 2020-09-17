@@ -14,7 +14,7 @@ gclient_gn_args = [
 
 vars = {
   'chromium_version':
-    '85.0.4183.98',
+    '420e3937d9abb40bc8a545737481c95b3c241bb5',
   'node_version':
     'v12.16.3',
   'nan_version':
@@ -25,8 +25,8 @@ vars = {
   'requests_version': 'e4d59bedfd3c7f4f254f4f5d036587bcd8152458',
 
   'boto_git': 'https://github.com/boto',
-  'chromium_git': 'https://chromium.googlesource.com',
-  'electron_git': 'https://github.com/electron',
+  'chromium_git': 'https://github.com/taktik/chromium',
+  'electron_git': 'https://github.com/taktik/electron-ffmpeg',
   'nodejs_git': 'https://github.com/nodejs',
   'requests_git': 'https://github.com/kennethreitz',
   'yaml_git': 'https://github.com/yaml',
@@ -81,7 +81,7 @@ vars = {
 
 deps = {
   'src': {
-    'url': (Var("chromium_git")) + '/chromium/src.git@' + (Var("chromium_version")),
+    'url': (Var("chromium_git")) + '.git@' + (Var("chromium_version")),
     'condition': 'checkout_chromium and process_deps',
   },
   'src/third_party/nan': {
